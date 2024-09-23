@@ -4,7 +4,7 @@ import { useReducer } from 'react'
 
 const initialState: State = {
     fromLanguage: 'auto',
-    toLanguage: 'es',
+    toLanguage: 'en',
     fromText: '',
     result: '',
     loading: false
