@@ -11,7 +11,7 @@ interface Props {
 const commonStyles = { border: '0', height: '200px' }
 
 const getPlaceholder = ( {type, loading}: {type: SectionType, loading?: boolean} ) => {
-    if(type === SectionType.From) return 'Traducir texto'
+    if(type === SectionType.From) return 'Introducir texto'
     if(loading === true) return 'Traduciendo...'
     return 'Traducción'
 }
@@ -29,6 +29,7 @@ export const TextArea = ({ type, loading, value, onChange }: Props) => {
         <Form.Control 
             autoFocus={type === SectionType.From}
             as={'textarea'}
+            disabled={type === SectionType.To}
             placeholder={getPlaceholder({type, loading})}
             style={styles}
             value={value}
