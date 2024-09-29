@@ -1,6 +1,6 @@
 import { AUTO_LANGUAGE } from "../constants"
 import { Action, FromLanguage, Language, type State } from "../types.d"
-import { act, useReducer } from 'react'
+import { useReducer } from 'react'
 
 const initialState: State = {
     fromLanguage: 'auto',
@@ -21,8 +21,9 @@ export const reducer = (state: State, action: Action) => {
         ...state,
         loading,
         result: '',
-        fromLanguage: state.toLanguage,
-        toLanguage: state.fromLanguage
+        fromLanguage: state.toLanguage, 
+        toLanguage: state.fromLanguage,
+        fromText: state.result
       }
     }
   
