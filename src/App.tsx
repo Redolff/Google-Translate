@@ -29,7 +29,7 @@ const App = () => {
   useEffect(() => {
     if(debouncedFromText === '') return
     const sendMessageApi = async({ fromLanguage, toLanguage, debouncedFromText }: { fromLanguage: FromLanguage, toLanguage: Language, debouncedFromText: string }) => {
-      const API = 'https://backendgoogletranslate.vercel.app/api/cohere';
+      const API = 'https://backendgoogletranslate.vercel.app/';
       try{
         const response = await fetch(API, {
           method: 'POST',
